@@ -13,7 +13,8 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
   kc:
-    image: quay.io/keycloak/keycloak:legacy
+
+    image: quay.io/keycloak/keycloak:24.0.1
     environment:
       DB_VENDOR: POSTGRES
       DB_ADDR: db
@@ -25,7 +26,7 @@ services:
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
     ports:
-      - "8080:8080"
+      - "8070:8070"
     depends_on:
       - db
 

@@ -22,6 +22,7 @@ public abstract class BaseIntegrationTest {
             .writer()
             .withDefaultPrettyPrinter();
 
+    
     @Autowired
     protected MockMvc mvc;
 
